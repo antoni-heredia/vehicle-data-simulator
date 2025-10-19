@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "vehicle-simulator"
+version = "0.1.0"
+description = "Simulador de datos de vehículos usando OSRM y Kafka"
+authors = ["Toni <a.heredia.castillo@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+shapely = "^2.0.4"
+avro = "^1.11.3"
+geopy = "^2.4.1"
+attrs = "^25.4.0"
+httpx = "^0.27.0"
+confluent-kafka = { version = "^2.5.0", extras = ["schema-registry", "avro"] }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
